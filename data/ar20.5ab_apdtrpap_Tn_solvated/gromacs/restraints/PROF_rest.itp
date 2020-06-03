@@ -1,0 +1,92 @@
+#ifdef STEP4_0
+#define fc_bb 400.0
+#define fc_sc 40.0
+#define fc_cdih 4.0
+#endif
+#ifdef STEP4_1
+#define fc_bb 400.0
+#define fc_sc 40.0
+#define fc_cdih 4.0
+#endif
+
+[ position_restraints ]
+    1     1    fc_bb    fc_bb    fc_bb
+    5     1    fc_bb    fc_bb    fc_bb
+    7     1    fc_sc    fc_sc    fc_sc
+   11     1    fc_bb    fc_bb    fc_bb
+   12     1    fc_bb    fc_bb    fc_bb
+   13     1    fc_bb    fc_bb    fc_bb
+   14     1    fc_sc    fc_sc    fc_sc
+   17     1    fc_bb    fc_bb    fc_bb
+   19     1    fc_sc    fc_sc    fc_sc
+   22     1    fc_sc    fc_sc    fc_sc
+   25     1    fc_bb    fc_bb    fc_bb
+   26     1    fc_bb    fc_bb    fc_bb
+   27     1    fc_bb    fc_bb    fc_bb
+   29     1    fc_bb    fc_bb    fc_bb
+   31     1    fc_sc    fc_sc    fc_sc
+   34     1    fc_sc    fc_sc    fc_sc
+   35     1    fc_sc    fc_sc    fc_sc
+   36     1    fc_sc    fc_sc    fc_sc
+   37     1    fc_bb    fc_bb    fc_bb
+   38     1    fc_bb    fc_bb    fc_bb
+   39     1    fc_bb    fc_bb    fc_bb
+   41     1    fc_bb    fc_bb    fc_bb
+   43     1    fc_sc    fc_sc    fc_sc
+   45     1    fc_sc    fc_sc    fc_sc
+   46     1    fc_sc    fc_sc    fc_sc
+   50     1    fc_bb    fc_bb    fc_bb
+   51     1    fc_bb    fc_bb    fc_bb
+   52     1    fc_bb    fc_bb    fc_bb
+   54     1    fc_bb    fc_bb    fc_bb
+   56     1    fc_sc    fc_sc    fc_sc
+   59     1    fc_sc    fc_sc    fc_sc
+   62     1    fc_sc    fc_sc    fc_sc
+   65     1    fc_sc    fc_sc    fc_sc
+   67     1    fc_sc    fc_sc    fc_sc
+   68     1    fc_sc    fc_sc    fc_sc
+   71     1    fc_sc    fc_sc    fc_sc
+   74     1    fc_bb    fc_bb    fc_bb
+   75     1    fc_bb    fc_bb    fc_bb
+   76     1    fc_bb    fc_bb    fc_bb
+   77     1    fc_sc    fc_sc    fc_sc
+   80     1    fc_bb    fc_bb    fc_bb
+   82     1    fc_sc    fc_sc    fc_sc
+   85     1    fc_sc    fc_sc    fc_sc
+   88     1    fc_bb    fc_bb    fc_bb
+   89     1    fc_bb    fc_bb    fc_bb
+   90     1    fc_bb    fc_bb    fc_bb
+   92     1    fc_bb    fc_bb    fc_bb
+   94     1    fc_sc    fc_sc    fc_sc
+   98     1    fc_bb    fc_bb    fc_bb
+   99     1    fc_bb    fc_bb    fc_bb
+  100     1    fc_bb    fc_bb    fc_bb
+  101     1    fc_sc    fc_sc    fc_sc
+  104     1    fc_bb    fc_bb    fc_bb
+  106     1    fc_sc    fc_sc    fc_sc
+  109     1    fc_sc    fc_sc    fc_sc
+  112     1    fc_bb    fc_bb    fc_bb
+  113     1    fc_sc    fc_sc    fc_sc
+  114     1    fc_sc    fc_sc    fc_sc
+  115     1    fc_sc    fc_sc    fc_sc
+  117     1    fc_sc    fc_sc    fc_sc
+  119     1    fc_sc    fc_sc    fc_sc
+  120     1    fc_sc    fc_sc    fc_sc
+  122     1    fc_bb    fc_bb    fc_bb
+  124     1    fc_bb    fc_bb    fc_bb
+  125     1    fc_bb    fc_bb    fc_bb
+  126     1    fc_sc    fc_sc    fc_sc
+  130     1    fc_sc    fc_sc    fc_sc
+  132     1    fc_sc    fc_sc    fc_sc
+  134     1    fc_sc    fc_sc    fc_sc
+  136     1    fc_sc    fc_sc    fc_sc
+  138     1    fc_sc    fc_sc    fc_sc
+  141     1    fc_sc    fc_sc    fc_sc
+
+[ dihedral_restraints ]
+  115   120   130   134     1    -60.0      2.5  fc_cdih
+  117   119   115   120     1    -60.0      2.5  fc_cdih
+  119   115   120   130     1     60.0      2.5  fc_cdih
+  120   130   134   117     1     60.0      2.5  fc_cdih
+  130   134   117   119     1    -60.0      2.5  fc_cdih
+  134   117   119   115     1     60.0      2.5  fc_cdih

@@ -1,0 +1,7 @@
+---
+- 
+  chain: none
+  type: o-linked
+  prot: '{"segid":"PROF","resname":"THR","resid":"4"}'
+  grs: 1 AGALNA
+  segid: CARA

@@ -1,0 +1,42 @@
+Check global input consistency...
+Done.
+- Finished with read_parameters.
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_charmm22ph.in
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_charmm22ph_nt.in
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_charmm22ph_ct.in
+- Finished with read_topology_geo.
+  Reading topology file: /home/charmm-gui/local/GalaxyFill/data/topology_eng_charmm22ph.in
+  Num_ref_res =    77
+- Finished with read_topology_eng.
+- Rotamer setup
+  Reading rotamer library file  /home/charmm-gui/local/GalaxyFill/data/bbdep02.May.sortlib
+  Total number of rotamers in rot lib file      466829
+  Reading infile_chi_def file  /home/charmm-gui/local/GalaxyFill/data/def_chi.in
+  Random seed =     279753
+Task: local_optimize
+ - local_optimize_relax: no
+ - local_optimize_sidechain: no
+============================================================
+  Reading sequence from pdb file: 5t6p_prob.orig_init.pdb
+    There seems to be break in chain.  137 A SER   138 A MET  C-N bond length is    21.193
+  Reading pdb file: 5t6p_prob.orig_init.pdb
+- Add missing atoms activated.
+  Number of added heavy atoms =     0
+  Total number of added atoms =     0
+  n_unplaced =     0
+- Fix type "all" activated: All atoms except ULR/USC are fixed.
+- Energy: MM energy activated.
+- Add missing atoms activated.
+  Number of added heavy atoms =     0
+  Total number of added atoms =     0
+  n_unplaced =     0
+Before optimization, 5t6p_prob.orig_init.pdb ENERGY.0     147069.985
+Before optimization, 5t6p_prob.orig_init.pdb ENERGY.1     147069.985        0.000        0.000
+Before optimization, 5t6p_prob.orig_init.pdb ENERGY.2.0 145762.541    296.192    322.250    179.510    509.491      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+After  optimization, 5t6p_prob.orig_init.pdb ENERGY.0         20.453
+After  optimization, 5t6p_prob.orig_init.pdb ENERGY.1         20.453        0.000        0.000
+After  optimization, 5t6p_prob.orig_init.pdb ENERGY.2.0      1.288     18.977     41.010      1.874    -42.696      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000      0.000
+------------------------------------------------------------
+Total User Time =      7.052 sec
+           0 dy  0 hr  0 min  7.052 sec
+------------------------------------------------------------

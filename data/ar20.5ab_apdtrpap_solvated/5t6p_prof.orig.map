@@ -1,0 +1,13 @@
+HOME  .
+QUERY 5t6p_prof.orig_init
+TEMPL 5t6p_prof.orig_build.pdb
+RESIDUE     1 A  A     1  _    -     -  -
+RESIDUE     2 A  P     2  _    -     -  -
+RESIDUE     3 A  D     3  _     3    1  D
+RESIDUE     4 A  T     4  _     4    2  T
+RESIDUE     5 A  R     5  _     5    3  R
+RESIDUE     6 A  P     6  _     6    4  P
+RESIDUE     7 A  A     7  _     7    5  A
+RESIDUE     8 A  P     8  _     8    6  P
+TER
+END

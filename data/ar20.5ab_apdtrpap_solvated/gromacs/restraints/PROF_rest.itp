@@ -1,0 +1,68 @@
+#ifdef STEP4_0
+#define fc_bb 400.0
+#define fc_sc 40.0
+#endif
+#ifdef STEP4_1
+#define fc_bb 400.0
+#define fc_sc 40.0
+#endif
+
+[ position_restraints ]
+    1     1    fc_bb    fc_bb    fc_bb
+    5     1    fc_bb    fc_bb    fc_bb
+    7     1    fc_sc    fc_sc    fc_sc
+   11     1    fc_bb    fc_bb    fc_bb
+   12     1    fc_bb    fc_bb    fc_bb
+   13     1    fc_bb    fc_bb    fc_bb
+   14     1    fc_sc    fc_sc    fc_sc
+   17     1    fc_bb    fc_bb    fc_bb
+   19     1    fc_sc    fc_sc    fc_sc
+   22     1    fc_sc    fc_sc    fc_sc
+   25     1    fc_bb    fc_bb    fc_bb
+   26     1    fc_bb    fc_bb    fc_bb
+   27     1    fc_bb    fc_bb    fc_bb
+   29     1    fc_bb    fc_bb    fc_bb
+   31     1    fc_sc    fc_sc    fc_sc
+   34     1    fc_sc    fc_sc    fc_sc
+   35     1    fc_sc    fc_sc    fc_sc
+   36     1    fc_sc    fc_sc    fc_sc
+   37     1    fc_bb    fc_bb    fc_bb
+   38     1    fc_bb    fc_bb    fc_bb
+   39     1    fc_bb    fc_bb    fc_bb
+   41     1    fc_bb    fc_bb    fc_bb
+   43     1    fc_sc    fc_sc    fc_sc
+   45     1    fc_sc    fc_sc    fc_sc
+   47     1    fc_sc    fc_sc    fc_sc
+   51     1    fc_bb    fc_bb    fc_bb
+   52     1    fc_bb    fc_bb    fc_bb
+   53     1    fc_bb    fc_bb    fc_bb
+   55     1    fc_bb    fc_bb    fc_bb
+   57     1    fc_sc    fc_sc    fc_sc
+   60     1    fc_sc    fc_sc    fc_sc
+   63     1    fc_sc    fc_sc    fc_sc
+   66     1    fc_sc    fc_sc    fc_sc
+   68     1    fc_sc    fc_sc    fc_sc
+   69     1    fc_sc    fc_sc    fc_sc
+   72     1    fc_sc    fc_sc    fc_sc
+   75     1    fc_bb    fc_bb    fc_bb
+   76     1    fc_bb    fc_bb    fc_bb
+   77     1    fc_bb    fc_bb    fc_bb
+   78     1    fc_sc    fc_sc    fc_sc
+   81     1    fc_bb    fc_bb    fc_bb
+   83     1    fc_sc    fc_sc    fc_sc
+   86     1    fc_sc    fc_sc    fc_sc
+   89     1    fc_bb    fc_bb    fc_bb
+   90     1    fc_bb    fc_bb    fc_bb
+   91     1    fc_bb    fc_bb    fc_bb
+   93     1    fc_bb    fc_bb    fc_bb
+   95     1    fc_sc    fc_sc    fc_sc
+   99     1    fc_bb    fc_bb    fc_bb
+  100     1    fc_bb    fc_bb    fc_bb
+  101     1    fc_bb    fc_bb    fc_bb
+  102     1    fc_sc    fc_sc    fc_sc
+  105     1    fc_bb    fc_bb    fc_bb
+  107     1    fc_sc    fc_sc    fc_sc
+  110     1    fc_sc    fc_sc    fc_sc
+  113     1    fc_bb    fc_bb    fc_bb
+  114     1    fc_sc    fc_sc    fc_sc
+  115     1    fc_sc    fc_sc    fc_sc
