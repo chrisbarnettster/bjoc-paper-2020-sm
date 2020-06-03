@@ -1,0 +1,407 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "Workflow constructed from history 'complex_apdtrpap_Tn'", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "waterless.pdb"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 10
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"optional\": false}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "66ee380e-4408-4dc9-a7f4-6435b2deb52b", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "step3_charmm2omm.pdb"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 130
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"optional\": false}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "1c746506-c1b9-465d-8b3f-da6bcfc94b35", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "combined_wrapped.dcd"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 250
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"optional\": false}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "e62c35ef-ecfd-4cf7-ae34-687e9306e008", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "waterless_0.dcd"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 370
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"optional\": false}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "f255f907-790b-4850-81b0-421cbd6f537c", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "mdanalysis_cosine_analysis", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "strin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "trajin": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Cosine Content", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "cosout", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "mdanalysis_cosine_analysis", 
+            "tool_state": "{\"index\": \"0\", \"__page__\": null, \"strin\": null, \"__rerun_remap_job_id__\": null, \"trajin\": null, \"components\": \"3\", \"chromInfo\": \"/tmp/tmpgzb52ybv/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\", \"__input_ext\": \"dcd\"}", 
+            "tool_version": "0.20", 
+            "type": "tool", 
+            "uuid": "46532e68-715c-4350-a742-ef84751f7dff", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "mdanalysis_ramachandran", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "strin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "trajin": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Ramachandran Analysis", 
+            "outputs": [
+                {
+                    "name": "o_plot1", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "o_plot2", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 130
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "mdanalysis_ramachandran", 
+            "tool_state": "{\"subselection\": {\"__current_case__\": 0, \"residues\": \"No\"}, \"__page__\": null, \"strin\": null, \"__rerun_remap_job_id__\": null, \"segid1\": \"PROF\", \"trajin\": null, \"chromInfo\": \"/tmp/tmpgzb52ybv/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\", \"__input_ext\": \"dcd\"}", 
+            "tool_version": "0.20", 
+            "type": "tool", 
+            "uuid": "adc8eef7-22f2-4223-b57f-195973977af3", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "mdanalysis_ramachandran", 
+            "errors": null, 
+            "id": 6, 
+            "input_connections": {
+                "strin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "trajin": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Ramachandran Analysis", 
+            "outputs": [
+                {
+                    "name": "o_plot1", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "o_plot2", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 250
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "mdanalysis_ramachandran", 
+            "tool_state": "{\"subselection\": {\"__current_case__\": 0, \"residues\": \"No\"}, \"__page__\": null, \"strin\": null, \"__rerun_remap_job_id__\": null, \"segid1\": \"PROA\", \"trajin\": null, \"chromInfo\": \"/tmp/tmpgzb52ybv/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\", \"__input_ext\": \"dcd\"}", 
+            "tool_version": "0.20", 
+            "type": "tool", 
+            "uuid": "4a25ed56-a51c-4420-9276-8af2773c11fd", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "mdanalysis_rog", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "strin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "trajin": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Radius of gyration Analysis", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "o_plot", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 370
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "mdanalysis_rog", 
+            "tool_state": "{\"__page__\": null, \"label1\": \"RG\", \"__rerun_remap_job_id__\": null, \"segid1\": \"PROF\", \"trajin\": null, \"title1\": \"Radius of gyration timeseries and histogram\", \"strin\": null, \"chromInfo\": \"/tmp/tmpgzb52ybv/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\", \"__input_ext\": \"dcd\"}", 
+            "tool_version": "0.20", 
+            "type": "tool", 
+            "uuid": "24992f88-db4c-4313-9cb5-d66386ce7b06", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "mdanalysis_endtoend", 
+            "errors": null, 
+            "id": 8, 
+            "input_connections": {
+                "strin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "trajin": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "End to End Analysis", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "o_plot", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 490
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "mdanalysis_endtoend", 
+            "tool_state": "{\"__page__\": null, \"label1\": \"N-C\", \"__rerun_remap_job_id__\": null, \"segid1\": \"PROF\", \"trajin\": null, \"title1\": \"End to end timeseries and histogram\", \"strin\": null, \"chromInfo\": \"/tmp/tmpgzb52ybv/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\", \"__input_ext\": \"dcd\"}", 
+            "tool_version": "0.20", 
+            "type": "tool", 
+            "uuid": "f4a0ef24-08c5-43b5-8d4e-c48ef66b113f", 
+            "workflow_outputs": []
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "bio3d_rmsd", 
+            "errors": null, 
+            "id": 9, 
+            "input_connections": {
+                "dcdin": {
+                    "id": 3, 
+                    "output_name": "output"
+                }, 
+                "pdbin": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "RMSD Analysis", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "rmsd_plot", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "rmsd_hist_plot", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 610
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "bio3d_rmsd", 
+            "tool_state": "{\"__page__\": null, \"rmsd\": {\"sele\": \"segid\", \"__current_case__\": 13, \"segid\": \"PROF\"}, \"__rerun_remap_job_id__\": null, \"dcdin\": null, \"pdbin\": null, \"chromInfo\": \"/tmp/tmpgzb52ybv/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\", \"__input_ext\": \"dcd\"}", 
+            "tool_version": "2.3.4", 
+            "type": "tool", 
+            "uuid": "6b82e572-ab6e-4105-ae44-38881827e970", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "bio3d_pca", 
+            "errors": null, 
+            "id": 10, 
+            "input_connections": {
+                "dcdin": {
+                    "id": 3, 
+                    "output_name": "output"
+                }, 
+                "pdbin": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PCA", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "pca_plot", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "pca_cluster", 
+                    "type": "png"
+                }, 
+                {
+                    "name": "pc1_rmsf", 
+                    "type": "png"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 730
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "bio3d_pca", 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"__input_ext\": \"dcd\", \"dcdin\": null, \"pdbin\": null, \"pca\": {\"sele\": \"segid\", \"__current_case__\": 9, \"segid\": \"PROF\"}, \"chromInfo\": \"/tmp/tmpgzb52ybv/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\", \"method\": \"false\"}", 
+            "tool_version": "2.3.4", 
+            "type": "tool", 
+            "uuid": "83de21ff-084b-4a8d-98ef-72c77690a452", 
+            "workflow_outputs": []
+        }
+    }, 
+    "tags": [], 
+    "uuid": "584b4702-58ef-4d45-a898-5190b87109c7", 
+    "version": 0
+}
