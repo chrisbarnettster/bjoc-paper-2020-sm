@@ -15,7 +15,7 @@ A NVT simulation for common production-level simulations
     fswitch=10.0,  ! Force-based switching
 
     ! MD settings
-    nstlim=25000,  ! 25K steps, 25 ps total
+    nstlim=125000, ! 125K steps, 125 ps total
     dt=0.001,      ! time step (ps)
 
     ! SHAKE
@@ -24,7 +24,7 @@ A NVT simulation for common production-level simulations
 
     ! Control how often information is printed
     ntpr=1000,     ! Print energies every 1000 steps
-    ntwx=1000,     ! Print coordinates every 1000 steps to the trajectory
+    ntwx=5000,     ! Print coordinates every 5000 steps to the trajectory
     ntwr=10000,    ! Print a restart file every 10K steps (can be less frequent)
 !   ntwv=-1,       ! Uncomment to also print velocities to trajectory
 !   ntwf=-1,       ! Uncomment to also print forces to trajectory

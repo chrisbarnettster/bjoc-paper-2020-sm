@@ -23,9 +23,10 @@ set amber = pmemd
 # the minimization step.
 
 # step4.0
-set init = step3_charmm2amber
+set init = step3_input
 set istep = step4.0_minimization
 
+if (-e "dihe.restraint") sed -e "s/FC/1.0/g" dihe.restraint > ${istep}.rest
 pmemd -O -i ${istep}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${istep}.mdout -r ${istep}.rst7 -inf ${istep}.mdinfo -ref ${init}.rst7
 
 
@@ -34,6 +35,7 @@ pmemd -O -i ${istep}.mdin -p ${init}.parm7 -c ${init}.rst7 -o ${istep}.mdout -r 
 set pstep = step4.0_minimization
 set istep = step4.1_equilibration
 
+if (-e "dihe.restraint") sed -e "s/FC/1.0/g" dihe.restraint > ${istep}.rest
 ${amber} -O -i ${istep}.mdin -p ${init}.parm7 -c ${pstep}.rst7 -o ${istep}.mdout -r ${istep}.rst7 -inf ${istep}.mdinfo -ref ${init}.rst7 -x ${istep}.nc
 
 

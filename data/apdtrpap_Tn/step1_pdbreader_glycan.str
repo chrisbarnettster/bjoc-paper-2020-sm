@@ -58,9 +58,8 @@ CONS FIX sele ( PROT .and. PINIT .and. .not. NOFIX ) .or. ( GINIT ) end
 set cimpr = 250
 stream carbohydrate_improper_restraint.str
 
-nbonds atom switch vatom vswitch -
-       ctonnb 10.0 ctofnb 10.0 cutnb 12.0 cutim 14.0 -
-       inbfrq -1 imgfrq -1 wmin 0.1 cdie eps 80.0
+NBOND NOELEC SWIT VDW VATOM VSWIT -
+      SOFT EMAX 100
 
 calc etol = @ncarb * 60
 calc pener = 0.0
@@ -96,6 +95,7 @@ label write_rand
    incr i by 1
 if i .le. @ncarb goto write_rand
 
+prnlev 0
 label do_clust
    calc iCycle = 1
    calc NCycle = 500
@@ -206,6 +206,7 @@ label do_clust
 
    incr iClust by 1
 if iClust .le. @NClust goto do_clust
+prnlev 5
 
 set carbmodel = Failed
 
@@ -224,6 +225,10 @@ prnlev 5
 
 CONS FIX sele ( PROT .and. PINIT .and. .not. NOFIX ) .or. ( GINIT ) end
 CONS HARM CLEAR
+
+nbonds atom switch vatom vswitch -
+       ctonnb 10.0 ctofnb 10.0 cutnb 12.0 cutim 14.0 -
+       inbfrq -1 imgfrq -1 wmin 0.1 cdie eps 80.0
 
 mini sd   nstep 250 tolenr 0.001
 mini abnr nstep 250 tolenr 0.001
