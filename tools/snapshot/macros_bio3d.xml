@@ -1,0 +1,25 @@
+<macros>
+    <token name="@VERSION@">2.3.4</token>
+    <xml name="requirements">
+        <requirements>
+            <requirement type="package" version="2.3_4">r-bio3d</requirement>
+            <yield/>
+        </requirements>
+    </xml>
+    <xml name="analysis_inputs">
+        <param format="dcd" name="dcdin" type="data" label="DCD trajectory input"/>
+        <param format="pdb" name="pdbin" type="data" label="PDB input"/>
+        <yield/>
+    </xml>
+    <xml name="tests_inputs">
+        <param name="dcdin" value="test.dcd" ftype="dcd"/>
+        <param name="pdbin" value="test.pdb" ftype="pdb"/>
+        <yield/>
+    </xml>
+    <xml name="citations">
+        <citations>
+            <citation type="doi">10.1093/bioinformatics/btz107</citation>
+            <citation type="doi">10.1093/bioinformatics/btl461</citation>
+        </citations>
+    </xml>
+</macros>

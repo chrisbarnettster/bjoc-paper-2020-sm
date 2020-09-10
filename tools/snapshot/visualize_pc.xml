@@ -1,0 +1,142 @@
+<tool id="bio3d_pca_visualize" name="PCA visualization" version="@VERSION@">
+    <description>- generate trajectories of principal components of atomic motion</description>
+    <macros>
+        <import>macros_bio3d.xml</import>
+    </macros>   
+    <expand macro="requirements" />
+    <command detect_errors="exit_code">
+<![CDATA[ 
+   Rscript '$__tool_directory__/visualize_pc.R'
+        '$dcdin' 
+        '$pdbin'
+        '$method'
+        #if $pca.sele == 'calpha':
+          "string"
+           "calpha"
+        #end if
+        #if $pca.sele == 'cbeta':
+          "string"
+          '$pca.cbeta'
+        #end if
+        #if $pca.sele == 'backbone':
+          "string"
+          "backbone"
+        #end if
+        #if $pca.sele == 'sidechain':
+          "string"
+          "sidechain"
+        #end if
+        #if $pca.sele == 'protein':
+          "string"
+          "protein"
+        #end if
+        #if $pca.sele == 'ligand':
+          "string"
+          "ligand"
+        #end if
+        #if $pca.sele == 'nucleic':
+          "string"
+          "nucleic"
+        #end if
+        #if $pca.sele == 'elety':
+          "elety"
+          '$pca.elety'
+        #end if
+        #if $pca.sele == 'resid':
+          "resid"
+          '$pca.resid'
+        #end if
+        #if $pca.sele == 'segid':
+          "segid"
+          '$pca.segid'
+        #end if
+        '$pc_id' 
+        '$pdbout' 
+    2>&1
+]]></command>
+    <inputs>
+        <expand macro="analysis_inputs"/>
+        <param name="method" type="boolean" truevalue="TRUE" falsevalue="FALSE" checked="false"
+            label="Use singular value decomposition (SVD) instead of default eigenvalue decomposition ?" help="Default: No" />
+        <conditional name="pca">
+           <param name="sele" type="select" label="Select domains">
+             <option value="calpha">C-alpha</option>
+             <option value="cbeta">C-beta</option>
+             <option value="backbone">Backbone</option>
+             <option value="sidechain">Sidechain</option>
+             <option value="protein">Protein</option>
+             <option value="ligand">Ligand</option>
+             <option value="nucleic">Nucleic acids</option>
+             <option value="elety">Atom names</option>
+             <option value="resid">Residue ID</option>
+             <option value="segid">Segment ID</option>
+           </param>
+           <when value="calpha">
+           </when>
+           <when value="cbeta">
+           </when>
+           <when value="backbone">
+           </when> 
+           <when value="sidechain">
+           </when>
+           <when value="protein">
+           </when>
+           <when value="ligand">
+           </when>
+           <when value="nucleic">
+           </when>
+          <when value="elety">
+            <param name="elety"  type="text" value="CA" label="Atom name"/>
+          </when>
+          <when value="resid">
+            <param name="resid"  type="text" value="BGLC" label="Residue ID"/>
+          </when>
+          <when value="segid">
+            <param name="segid"  type="text" value="SUBS" label="Segment ID"/>
+          </when>
+        </conditional>
+        <param name="pc_id" type="integer" value="1" label="Principal component ID"/>
+    </inputs>
+
+    <outputs>
+        <data format="pdb" name="pdbout" label="PCA_${pc_id}.pdb"/>
+    </outputs>
+    <tests>
+         <test>
+            <expand macro="tests_inputs"/>
+            <param name="method" value="false"/>
+            <param name="sele" value="calpha"/> 
+            <param name="pc_id" value="1"/>
+            <output name="pdbout" file="PCA_1.pdb" />
+        </test>
+    </tests>
+    <help><![CDATA[
+.. class:: infomark
+
+**What it does**
+        
+This tool can generate small trajectories of a given principal component.
+      
+_____
+
+
+.. class:: infomark
+
+**Input**
+
+       - Input file in PDB format
+       - Input file in DCD format
+
+_____
+
+
+.. class:: infomark
+
+**Output**
+
+       - A short trajectory (as PDB) of the given principal component ID.
+
+
+    ]]></help>
+    <expand macro="citations" />
+</tool>
